@@ -1,0 +1,40 @@
+Algoritmo SECUENCIA
+	//ENUNCIADO=Calcular la media de una serie de números positivos, suponiendo que los datos se leen desde un terminal. 
+	//Un valor de cero ?como entrada? indicará que se ha alcanzado el final de la serie de números positivos.
+	//CREADO POR: HERNAN ALBERTO LONDOÑO VELEZ
+	//FECHA: 26/02/2023
+	//VERSION= 1.1
+	
+	//definir=
+	Definir v_c Como Entero //VARIABLE DE ENTRADA QUE CUENTA LOS NUMEROS
+	Definir v_s Como real //VARIABLE DE ENTRADA QUE SUMA LOS NUMEROS
+	Definir v_dato Como Real //VARIABLE DE PROCESO QUE ALMACENA EL NUMERO ESCRITO
+	Definir v_media Como Real //VARIABLE DE SALIDA QUE ALMACENA LA MEDIA
+	
+	//VALOR INICIAL:
+	v_c=0
+	v_s=0.0
+	v_dato=0.0
+	v_media=0.0
+	
+    //INICIO
+	//ENTRADA DE DATOS
+	Escribir "Datos nuemricos, para finalizar se introduce 0"
+	
+	//PROCESO
+	Repetir //SE REPITE EL PROCESO DE CONTAR CUANTOS NUMEROS SE INGRESAN, DE SUMAR TODOS LOS NUMERO INGRESADOS Y SE DIVIDE LA SUMA DE LOS NUMEROS ENTRE LA CANTIDAD DE NUMEROS INGRESADOS, HASTA QUE SE INGRESE UN VALOR IGUAL A CERO
+		Leer v_dato
+		Si V_dato<>0 Entonces
+			v_c=v_c+1 //SE CUENTAN CUANTOS NUMEROS SE INGRESAN
+			v_s=v_s+v_dato //SE SUMAN TODOS LOS NUMEROS INGRESADOS
+			
+		SiNo
+			v_media=v_s/v_c //PARA OBTENER LA MEDIA: SE DIVIDE LA SUMA DE LOS NUMEROS INGRESADOS ENTRE LA CANTIDAD DE NUMEROS INGRESADOS
+			Escribir v_media
+		Fin Si
+	Hasta Que v_dato=0 //EL PROCESO DE REPETIR SE TERMINA CUANDO SE INGRESA UN VALOR IGUAL A CERO
+	
+	//SALIDA
+	Escribir "-------------------------------------"
+	Escribir"la media es=",v_media
+FinAlgoritmo
