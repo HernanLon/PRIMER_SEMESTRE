@@ -1,0 +1,39 @@
+Algoritmo COMPARACIONES
+	//ENUNCIADO=Escribir un algoritmo que acepte tres números enteros e imprima el mayor de ellos
+	//HECHO POR: HERNAN ALBERTO LONDOÑO VELEZ
+	//FECHA: 26/02/2023
+	//VERSION=1.1
+	
+	//DEFINICION
+	Definir v_A Como Real //VARIABLE QUE ALMACENA EL PRIMER NUMERO
+	Definir v_B Como Real //VARIABLE QUE ALMACENA EL SEGUNDO NUMERO
+	Definir v_C Como Real //VARIABLE QUE ALMACENA EL TERCER NUMERO
+	
+	//VALOR INICIAL:
+	v_A=0.0
+	v_B=0.0
+	v_C=0.0
+	
+	//INICIO
+	//ENTRADA DE DATOS
+	Escribir "escriba numero 1";leer v_A
+	Escribir "escriba numero 2";leer v_B
+	Escribir "escriba numero 3";leer v_C
+	
+	//PROCESO
+	//SALIDA
+	Si v_A<v_B Entonces //SE DECIDE SEGUN SI EL PRIMER NUMERO ES MENOR AL SEGUNDO NUMERO PARA DECIDIR CUAL ES EL MAOR
+		Si v_B<v_C Entonces //SE DECIDE SEGUN SI EL SEGUNDO NUMERO ES MENOR AL TRECER NUMERO PARA DECIDIR CUAL ES EL MAOR
+			Escribir "C=",v_C //EL TERCER NUMERO ES EL MAYOR
+		SiNo
+			Escribir "B=",v_B //EL SEGUNDO NUMERO ES EL MAYOR
+		Fin Si
+	SiNo
+		Si v_A<v_C Entonces //SE DECIDE SEGUN SI EL PRIMER NUMERO ES MENOR AL TERCER NUMERO PARA DECIDIR CUAL ES EL MAOR
+			Escribir "C=",v_C //EL TERCER NUMERO ES EL MAYOR
+		SiNo
+			Escribir "A=",v_A //EL PRIMER NUMERO ES EL MAYOR
+		Fin Si
+	Fin Si
+	//FIN
+FinAlgoritmo
