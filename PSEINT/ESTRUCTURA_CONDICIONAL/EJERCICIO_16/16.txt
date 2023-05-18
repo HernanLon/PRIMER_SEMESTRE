@@ -1,0 +1,39 @@
+Algoritmo Resol1
+	//Resolución de una ecuación de primer grado.
+	//FECHA:03/03/2023
+	//VERSION= 1.0
+	//CREADO POR: Hernan Alberto Londoño Velez
+	
+	//DEFINIR VARIABLES=
+	Definir v_a Como Real//VARIABLE QUE ALMACENA EL VALOR DE A
+	Definir v_b Como Real//VARIABLE QUE ALMACENA EL VALOR DE B
+	Definir v_x Como Real//VARIABLE QUE ALMACENA UN RESULTADO DE UNA OPERACION 
+	
+	//VALOR INICIAL
+	v_a=0
+	v_b=0
+	v_x=0
+	
+	//INICIO=
+	Escribir "escriba (a) de la ecuacion ax+b=0"
+	leer v_a
+	
+	Escribir "escriba (b) de la ecuacion ax+b=0"
+	leer v_b
+	
+	//PROCESO
+	//SALIDA
+	Si v_a<>0 Entonces //SE DECIDE SI EL VALOR DE A ES DIFERENTE DE CERO
+		v_x=-v_b/v_a //SI EL VALOR A ES DIFERENTE DE CERO: EL VALOR B SE DIVIDE ENTRE EL VALOR A
+		Escribir "X es=",v_x
+	SiNo
+		Si b<>0 Entonces //SE DECIDE SI EL VALOR B ES DIFERENTE DE CERO
+			Escribir "Solucion imposible" //SI EL VALOR B ES DIFERENTE DE CERO ENTONCES LA SOLUCION ES IMPOSIBLE
+		SiNo
+			Escribir "Solucion indeterminada" //SI EL VALOR DE B ES IGUAL A CERO ENTONCES LA SOLUCION ES INDETERMINADA
+		Fin Si
+	Fin Si
+	//FIN
+
+	
+FinAlgoritmo
