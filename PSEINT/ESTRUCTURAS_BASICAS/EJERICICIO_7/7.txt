@@ -1,0 +1,45 @@
+Algoritmo SALARIOS
+	//ENUNCIADO=Calcular el salario bruto y el salario neto de un trabajador "por horas" conociendo el nombre, número de horas trabajadas, impuestos a pagar y salario neto.
+	//HECHO POR: HERNAN ALBERTO LONDOÑO VELEZ
+	//FECHA:26/02/2023
+	//VERSION: 1.0
+	
+	//DEFINICION=
+	Definir v_ne Como Caracter //VARAIBLE QUE ALMACENA EL NOMBRE DEL EMPLEADO
+	Definir v_tht Como Entero //VARIABLE QUE ALMACENA LAS HORAS TRABAJADAS
+	Definir v_vh Como entero //VARIABLE QUE ALMACENA EL VALOR DE LA HORA
+	Definir v_bruto Como Entero //VARIABLE QUE ALMACENA EL VALOR DEL SALARIO BRUTO
+	Definir v_tasas Como real //VARIABLE QUE ALMACENA EL VALOR DE LOS IMPUESTOS O TASAS
+	definir v_neto Como real //VARIABLE QUE ALAMCENA EL VALOR DEL SALARIO NETO
+	
+	//VALOR INICIAL:
+	v_ne=""
+	v_tht=0
+	v_vh=0
+	v_bruto=0
+	v_tasas=0.0
+	v_neto=0.0
+	
+	//INICIO=
+	//INGRESO DE DATOS
+	Escribir "escribe el nombre del empleado";Leer v_ne
+	Escribir "escribe el total de horas trabajadas";leer v_ht
+	Escribir "escribe el precio de las horas";Leer v_vh
+	Escribir "-----------------------------------------"
+	
+	//PROCESO
+	v_bruto=v_ht*v_vh //PARA OBTENER EL VALOR DEL SALARIO BRUTO: SE MULTIPLICA LAS HORAS TRABAJASDAS POR EL VALOR DE LAS HORAS
+	v_tasas=v_bruto*0.25 //PARA OBTENER EL VALOR DE LAS TASAS O IMPUESTOS: SE MULTIPLICA EL SALRIO BRUTO POR 0.25 (25% = 0.25)
+	v_neto=v_bruto-v_tasas //PARA OBTENER EL VALOR DEL SALARIO NETO: SE RESTA EL SALARIO BRUTO CON LAS TASAS
+	
+	//SALIDA
+	Escribir "-----------------------------------------"
+	Escribir "el nomnbre del empleado es=",v_ne
+	Escribir "el salario bruto es=","$",v_bruto
+	
+	Escribir "los impuestos o tasas a pagar son=","$",v_tasas
+	Escribir "el salario neto es=","$",v_neto
+	
+	Escribir "--------------------------------------------"
+    //FIN
+FinAlgoritmo
