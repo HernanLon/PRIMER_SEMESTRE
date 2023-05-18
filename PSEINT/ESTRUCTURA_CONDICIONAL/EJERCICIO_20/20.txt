@@ -1,0 +1,71 @@
+Algoritmo DIA_SEMANA_MODIFICADO
+	//ENUNCIADO= 5.  Pag. 143.  EJEMPLO 4.13 Preguntar qué día de la semana fue el día 1 del mes actual y calcular que día de la semana es hoy.
+	//DESARROLLADO POR: Hernan Alberto Londoño Velez
+	//FECHA: 03/03/2023
+	//VERSION: 1.0
+	
+	//Definir 
+	Definir v_dia1 Como Caracter//VARIABLE QUE ALMACENA LA LETRA INICIAL DE LA SEMANA DEL PRIMER DIA DEL MES.
+	Definir v_d1 Como Entero//VARIABLE QUE ALMACENA EL VALOR DEL PRIMER DIA DEL MES.
+	Definir v_dia Como Entero//VARIABLE QUE ALMACENA EL DIA DEL MES.
+	Definir v_diaSem Como Entero//VARIABLE QUE ALMACENA UN RESULADO DE UNA ECUACION ARITMETICA.
+	
+	//VALOR INICIAL:
+	v_dia1=""
+	v_d1=0
+	v_dia=0
+	v_diaSem=0
+	
+	//ENTRADA DE DATOS
+	Escribir "el dia 1 fue (L,M,X,J,V,S,D) por favor escriba la letra en mayuscula"
+	leer v_dia1
+	
+	//PROCESO Y SALIDA
+	Segun v_dia1 Hacer //SE DECIDE SEGUN CUAL ES EL PRIMER DIA DEL MES 
+		"L":
+			v_d1=0 //SI EL PRIMER DIA DEL MES ES LUNES ENTONCES ES 0
+		"M":
+			v_d1=1 //SI EL PRIMER DIA DEL MES ES MARTES ENTONCES ES 1
+		"X":
+			v_d1=2 //SI EL PRIMER DIA DEL MES ES MIERCOLES ENTONCES ES 2
+		"J":
+			d1=3 //SI EL PRIMER DIA DEL MES ES JUEVES ENTONCES ES 3
+		"V":
+			v_d1=4 //SI EL PRIMER DIA DEL MES ES VIERNES ENTONCES ES 4
+		"S":
+			v_d1=5 //SI EL PRIMER DIA DEL MES ES SABADO ENTONCES ES 5
+		"D":
+			v_d1=6 //SI EL PRIMER DIA DEL MES ES DOMINGO ENTONCES ES 6
+		De Otro Modo:
+			v_d1=-40 //SI ES OTRA OPCION ENTONCES NO SERIA UNA RESPUESTA CORRESTA
+	Fin Segun
+	
+	Escribir "escriba el numero del dia"
+	leer v_dia
+	
+	v_diaSem=v_dia+v_d1 //PARA OBTENER EL DIA DE LA SEMANA ENTONCES: SUMO EL DIA DEL MES CON EL NUMERO DE LA SEMANA DEL PRIMER DIA DEL MES
+	
+	Si v_diaSem>7 Entonces //SE DECIDE SI DIA ES MAYOR A 7
+		Repetir //SI V_DIASEM ES MAYOR A 7 ENTONCES:SE REALIZA EL SIGUIENTE PROCESO
+			v_diaSem=v_diaSem-7 //PARA OBTENER EL NUEVO VALOR DE V_DIASEM: SE RESTA DIA CON 7
+		Hasta Que v_diaSem<=7 //SE TERMINA EL PROCESO CUANDO V_DIASEM SEA MENOR O IGUAL A 7
+	Fin Si
+	//SALIDA
+	Segun v_diaSem Hacer //SE DECIDE SEGUN SI V_DIASEM ES IAGUAL A UN NUMERO DEL 1 AL 7
+		1:
+			Escribir "Ese dia es un lunes" //SI V_DIASEM ES IGUAL A 1 ENTONCES: ES LUNES
+		2:
+			Escribir "Ese dia es un martes" //SI V_DIASEM ES IGUAL A 2 ENTONCES: ES MARTES
+		3:
+			Escribir "Ese dia es un miercoles" //SI V_DIASEM ES IGUAL A 3 ENTONCES: ES MIERCOLES
+		4:
+			Escribir "Ese dia es un jueves" //SI V_DIASEM ES IGUAL A 4 ENTONCES: ES JUEVES
+		5:
+			Escribir "Ese dia es un viernes" //SI V_DIASEM ES IGUAL A 5 ENTONCES: ES VIERNES
+		6:
+			Escribir "Ese dia es un sabado" //SI V_DIASEM ES IGIAL A 6 ENTONCES: ES SABADO
+		7:
+			Escribir "Ese dia es un domingo" //SI V_DIASEM ES IGUAL A 7 ENTONCES: ES DOMINGO
+	Fin Segun
+
+FinAlgoritmo
