@@ -1,0 +1,46 @@
+Algoritmo MAYOR_
+	//ENUNCIADO=6.  Pag 146.  EJEMPLO 4.15 Diseñar un programa que lea tres números A, B, C y visualice en pantalla el valor del más grande. 
+	//Se supone que los tres valores son diferentes.
+	//HECHO POR: HERNAN ALBERTO LONDOÑO VELEZ
+	//FECHA:03/03/2023
+	//VERSION: 1.0
+	
+	//Definir 
+	Definir v_a Como Real//VARIABLE QUE ALMACENA EL VALOR INTRODUCIDO DE A
+	Definir v_b Como Real//VARIABLE QUE ALMACENA EL VALOR INTRODUCIDO DE B
+	Definir v_c Como Real//VARIABLE QUE ALMACENA EL VALOR INTRODUCIDO DE C
+	Definir v_mayor Como Real//VARIABLE QUE ALMACENA EL RESULTADO DE UNA OPERACION
+	
+	//VALOR INICIAL:
+	v_a=0.0
+	v_b=0.0
+	v_c=0.0
+	v_mayor=0.0
+	
+	//INTRODUCCION DE INFORMACION
+	Escribir "escribir el primer numero"
+	Leer v_a
+	
+	Escribir "escribe el segundo numero"
+	Leer v_b
+	
+	Escribir "escribe el tercer numero"
+	Leer v_c
+	
+	//PROCESO Y SALIDA
+	Si v_a>v_b Entonces //SE DECIDE SI EL VALOR DE A ES MAYOR QUE EL VALOR DE B PARA OBTENER EL NUMERO MAYOR
+		Si v_a>v_c Entonces //SE DECIDE SI EL VALOR DE A ES MAYOR QUE EL VALOR DE C PARA OBTENER EL NUMERO MAYOR
+			v_mayor=v_a //EL NUMERO MAYOR ES EL VALOR DE A
+		SiNo
+			v_mayor=v_c //EL NUMERO MAYOR ES EL VALOR DE C
+		Fin Si
+	SiNo
+		Si v_b>v_c Entonces //SE DECIDE SI EL VALOR DE B ES MAYOR QUE LE VALOR DE C PARA OBTENER EL NUMERO MAYOR
+			v_mayor=v_b //EL NUMERO MAYOR ES EL VALOR DE B
+		SiNo
+			v_mayor=v_c //EL NUMERO MAYOR ES EL VALOR DE C
+		Fin Si
+	Fin Si
+	
+	Escribir "el numero mayor es=",v_mayor
+FinAlgoritmo
