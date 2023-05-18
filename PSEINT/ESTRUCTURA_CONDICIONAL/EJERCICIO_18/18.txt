@@ -1,0 +1,43 @@
+Algoritmo sin_titulo
+	//ENUNCIADO=Pag. 137. EJEMPLOS 4.8 Programa que nos calcule el área de un triángulo conociendo sus lados. La estructura selectiva se utiliza para el
+    //control de la entrada de datos en el programa.
+	//DESARROLLADO POR: Hernan Alberto Londoño Velez
+	//FECHA: 03/03/2023
+	
+	//DEFINICION
+	Definir v_a Como Real//VARIABLE QUE ALMACENA EL VALOR INTRODUCIDO DE A.
+	Definir v_b Como Real//VARIABLE QUE ALMACENA EL VALOR INTRODUCIDO DE B.
+	Definir v_c Como Real//VARIABLE QUE ALMACENA EL VALOR INTRODUCIDO DE C.
+	Definir v_p Como Real//VARIABLE QUE ALMACENA UN RESULTADO DE UNA OPERACIÓN ARITMETICA.
+	Definir v_area Como Real//VARIABLE QUE ALMACENA UN RESULTADO DE UNA OPERACION ARITMETICA.
+	
+	//VALOR INICIAL:
+	v_a=0.0
+	v_b=0.0
+	v_c=0.0
+	v_p=0.0
+	v_area=0.0
+	
+	//ENTRADA DE DATOS
+	Escribir "escribe el lado ,a, del triangulo"
+	leer v_a
+	
+	Escribir "escribe el lado ,b, del triangulo"
+	leer v_b
+	
+	Escribir "escribe el lado ,c, del triangulo"
+	Leer v_c
+	
+	//PROCEOS
+	//SALIDA
+	v_p=(v_a+v_b+v_c)/2 //PARA OBTENER LA V_P: SE SUMAN LOS TRES VALORES INTRODUCIDOS Y SE DIVIDEN ENTRE 2
+	
+	Si (v_p>v_a) y (v_p>v_b) y (v_p>v_c) Entonces //SE DECIDE SI V_P ES MAYOR A LOS TRES VALORES INTRODUCIDOS
+		v_area= rc(v_p*(v_p-v_a)*(v_p-v_b)*(v_p-v_c)) //SI V_P ES MAYOR ENTONCES: AREA SE OBTIENE: (SE RESTA V_P CON VALOR A) SE MULTIPLICA CON (RESTA DE V_P CON VALOR B) SE MULTIPLICA CON (RESTA DE V_P CON VALOR C)  EL RESULTADO DE LO ANTEROR SE MULTIPLICA POR V_P Y SE LE SACA RAIZ CUADRADA
+		
+		Escribir "el area del triangulo es=",v_area
+	SiNo
+		Escribir "no es un triangulo" //SI V_P NO ES MAYOR ENTONCES: SE COMINICA QUE NO ES UN TRIANGULO
+	Fin Si
+	
+FinAlgoritmo
