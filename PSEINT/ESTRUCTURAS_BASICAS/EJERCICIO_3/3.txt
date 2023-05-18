@@ -1,0 +1,102 @@
+Algoritmo aceleracion_distancia
+	//VERSION=1.0
+	//FECHA=22/02/2023
+	//ENUNCIADO:Una locomotora necesita 10 s. para alcanzar su velocidad normal que es 25m/s.
+	//Suponiendo que su movimiento es uniformemente acelerado ¿Qué aceleración se le ha comunicado y qué espacio ha recorrido antes de alcanzar la velocidad regular?
+	//HECHO POR: HERNAN ALBERTO LONDOÑO VELEZ
+	//FECHA: 20/02/2023
+	//VERSION: 1.0
+	
+	//DEFINICION:
+	Definir v_vi como real //VARIABLE QUE ALMACENA EL VALOR DE VELOCIDAD INICIAL
+	Definir v_vf Como Real //VARIABLE QUE ALMACENA EL VALOR DE VELOCIDAD FINAL
+	Definir v_t Como Real //VARIABLE QUE ALMACENA EL VALOR DE TIEMPO
+	Definir v_mvi Como Entero //VARIABLE QUE ALAMCENA LA MEDICION DE VELOCIDAD INICIAL
+	Definir v_mvf Como Entero //VARIABLE QUE ALAMCENA LA MEDICION DE VELOCIDAD FINAL
+	Definir v_mt Como Entero //VARIABLE QUE ALAMCENA LA MEDICION DE TIEMPO
+	Definir v_vi2 Como Real //VARIABLE QUE ALMACENA EL VALOR DE VELOCIDAD INICIAL EN M/S
+	Definir v_vf2 Como Real //VARIABLE QUE ALMACENA EL VALOR DE VELOCIDAD FINAL EN M/S
+	Definir v_t2 Como Real //VARIABLE QUE ALMACENA TIEMPO EN SEGUNDOS.
+	Definir vf_vi Como Real //VARIABLE QUE ALMACENA EL RESULTADO DE UNA OPERACION ARITMETICA DE VF-VI
+	Definir v_a Como Real //VARAIABLE QUE ALMACENA EL RESULTADO DE UNA OPERACION ARITMETICA DE ACELERACION
+	Definir v_d Como Real //VARAIABLE QUE ALMACENA EL RESULTADO DE UNA OPERACION ARITMETICA DE DIATANCIA
+	
+	//VALOR INICA:
+	v_vi=0.0
+	v_vf=0.0
+	v_t=0.0
+	v_mvi=0
+	v_mvf=0
+	v_mt=0
+	v_vi2=0.0
+	v_vf2=0.0
+	v_t2=0.0
+	vf_vi=0.0
+	v_a=0.0
+	v_d=0.0
+	
+	
+	//INICIO
+	//ENTRADA DE DATOS
+	Escribir "escribe velocidad inicial"
+	leer v_vi
+	//ENTRADA DE DATOS
+	escribir " si velocidad inicial esta en m/s escriba 1 o si esta en km/h escriba 2"
+	leer v_mvi
+	//ENTRADA DE DATOS
+	escribir "escribe velocidad final"
+	leer v_vf
+	//ENTRADA DE DATOS
+	escribir "si velocidad final esta en m/s escriba 1 o si esta en km/h escriba 2"
+	leer v_mvf
+	//ENTRADA DE DATOS
+	escribir "escribe tiempo"
+	leer v_t
+	//ENTRADA DE DATOS
+	escribir "si tiempo esta en segundos escriba 1, si esta en minutos escriba 2, si esta en horas escriba 3"
+	leer v_mt
+	
+	escribir "-------------------------------------------------"
+	//PROCESO
+	Segun v_mvi Hacer //SE CONVIERTE LOS KM/H A M/S DE VELOCIDAD INICIAL
+		1:
+			v_vi2 =v_vi
+		2:
+			v_vi2 =v_vi/3.6
+	Fin Segun
+	//PROCESO
+	Escribir "velocidad inicial en m/s es:",v_vi2 "m/s"
+	//PROCESO
+	Segun v_mvf Hacer //SE CONVIERTE LOS KM/H A M/S DE VELOCIDAD FINAL
+		1:
+			v_vf2 =v_vf
+		2:
+			v_vf2 =v_vf/3.6
+	Fin Segun
+	//PROCESO
+	Escribir "velocidad final en m/s es:",v_vf2 "m/s"
+	//PROCESO
+	Segun v_mt Hacer //SE CONVIERTE LAS HORAS Y MINUTOS A SEGUNDOS DEL TIEMPO
+		1:
+			v_t2 =v_t
+		2:
+			v_t2 =v_t*60
+		3:  
+			v_t2 =v_t*3600
+	Fin Segun
+	//PROCESO
+	escribir "tiempo en segundo es:",v_t2 "seg"
+	escribir "-------------------------------------------------"
+	
+	Escribir "los resulatdos son:"
+	//SALIDA
+	vf_vi =v_vf2-v_vi2 //SE RESTA VELOCIDAD FINAL (EN SEGUNDOS) CON VELOCIDAD FINAL (EN SEGUNDOS) PARA OBTENER LA VARIABLE VF_VI
+	v_a =vf_vi/v_t2 //SE DIVIDE LA VARIABLE VF_VI ENTRE EL TMEPO (EN SEGUNDOS) PARA OBTENER ACELERACION
+	//SALIDA
+	v_t2 =v_t2*v_t2 //PARA OBTENER TIEMPO AL CUADRADO, SE MULTIPLICA TIEMPO POR TIEMPO
+	v_d =v_a*v_t2/2 //PARA OBTENER DISTANCIA, SE DIVIDE ACELERACION ENTRE TIEMPO AL CUADRADO
+	//SALIDA
+	Escribir "la aceleracion es:", v_a "m/s2"
+	Escribir "la distancia es:", v_d "m"
+	//FIN
+FinAlgoritmo 
